@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0875e8"><meta name="description" content="Predict your potential with a data-powered student marks prediction studio.">
+  <title>PREDICT — Student Potential Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+  <div class="loader" id="loader"><div class="loader-mark">P<span>.</span></div><p>CALIBRATING YOUR EXPERIENCE</p><div class="loader-line"><i></i></div></div>
+  <div class="cursor" id="cursor"></div><div class="cursor-aura" id="cursorAura"></div>
+  <div class="grid-field" id="gridField" aria-hidden="true"></div>
+  <main class="shell">
+    <header class="topline"><a class="wordmark" href="#home">p<span>.</span></a><span class="top-note">A STUDENT POTENTIAL EXPERIMENT / 2026</span><div class="top-actions"><span class="live-dot"></span><span>MODEL ONLINE</span><button class="sound-toggle" id="soundToggle" aria-label="Toggle ambient sound"><span class="sound-bars"><i></i><i></i><i></i></span><b>SOUND OFF</b></button><button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button></div></header>
+    <div class="ticker"><div class="ticker-track"><span>YOUR NEXT CHAPTER STARTS HERE</span><b>✳</b><span>DATA MEETS POSSIBILITY</span><b>✳</b><span>YOUR NEXT CHAPTER STARTS HERE</span><b>✳</b><span>DATA MEETS POSSIBILITY</span><b>✳</b></div></div>
+    <div class="layout">
+      <aside class="sidebar" id="sidebar">
+        <div class="side-label">EXPLORE / 07</div>
+        <a class="nav-block active" href="#home"><small>01 ↗</small><b>Home</b></a>
+        <a class="nav-block yellow" href="#about"><small>02 ↗</small><b>About</b></a>
+        <a class="nav-block orange" href="#analytics"><small>03 ↗</small><b>Analytics</b></a>
+        <a class="nav-block green" href="#predict"><small>04 ↗</small><b>Predict</b></a>
+        <a class="nav-block purple" href="#experience"><small>05 ↗</small><b>Experience</b></a>
+        <a class="nav-block cyan" href="#model"><small>06 ↗</small><b>Model</b></a>
+        <a class="nav-block black" href="#contact"><small>07 ↗</small><b>Contact</b></a>
+        <div class="side-bottom"><span>SCROLL TO EXPLORE</span><span class="side-arrow">↓</span></div>
+      </aside>
+      <div class="content">
+        <section class="hero section" id="home">
+          <div class="hero-kicker"><span class="pill">STUDENT MARKS / ML LAB</span><span class="mono">IND. 01 — 07</span></div>
+          <div class="hero-title-wrap"><p class="eyebrow">A LITTLE DATA. A LOT OF POSSIBILITY.</p><h1>PREDICT<br>YOUR <em>POTENTIAL.</em></h1><div class="hero-stamp">P<br><small>01 / 07</small></div></div>
+          <div class="hero-bottom"><p>What if your next result started with understanding your habits today? Explore the patterns, meet the model, and see what your inputs might predict.</p><a class="round-link" href="#predict">MAKE A PREDICTION <span>↗</span></a></div>
+          <div class="hero-art" id="heroArt"><div class="art-label">FIG. 001 — THE LEARNING LOOP</div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="cube cube-one"></div><div class="cube cube-two"></div><div class="hero-art-type">GROW<br><i>by design.</i></div><div class="art-cross">✳</div><div class="art-coordinate">22° / 07° / 26°</div></div>
+          <div class="scroll-cue"><span>SCROLL TO DISCOVER</span><i></i></div>
+        </section>
+        <section class="section about-section" id="about">
+          <div class="section-head"><span class="section-index">02 / THE IDEA</span><span class="section-aside">A BETTER WAY TO LOOK FORWARD</span></div>
+          <div class="about-grid"><h2>Numbers tell<br>a story. <em>Find<br>your next page.</em></h2><div class="about-copy"><span class="big-asterisk">✳</span><p class="lead">PREDICT is an experimental student marks prediction studio built around one idea: make machine learning feel human.</p><p>Explore a real student-performance dataset, understand the factors selected for the model, and try a prediction using the original trained Lasso Regression model.</p><div class="about-foot"><span>01 — EXPLORE</span><span>02 — UNDERSTAND</span><span>03 — PREDICT</span></div></div></div>
+          <div class="principles"><article><b>01</b><h3>Curiosity first.</h3><p>Turn student data into patterns worth exploring.</p></article><article><b>02</b><h3>Built on evidence.</h3><p>Visuals and summary numbers come from the supplied CSV.</p></article><article><b>03</b><h3>One real model.</h3><p>Your prediction is generated by the uploaded trained model.</p></article></div>
+        </section>
+        <section class="section analytics-section" id="analytics">
+          <div class="section-head"><span class="section-index">03 / THE DATA</span><span class="section-aside">REAL RECORDS. REAL PATTERNS.</span></div>
+          <div class="analytics-title"><h2>Behind every<br><em>number,</em> a person.</h2><p>Take a look at the dataset that powers this experiment. All figures below are calculated from the uploaded CSV.</p></div>
+          <div class="stat-grid"><article class="stat-card"><span>STUDENT RECORDS</span><strong id="statRecords">—</strong><small>ROWS IN DATASET</small></article><article class="stat-card yellow-card"><span>AVERAGE SCORE</span><strong id="statAverage">—</strong><small>EXAM SCORE / MEAN</small></article><article class="stat-card"><span>SCORE RANGE</span><strong id="statRange">—</strong><small>MINIMUM — MAXIMUM</small></article><article class="stat-card purple-card"><span>INPUT COLUMNS</span><strong id="statFeatures">—</strong><small>EXCLUDING TARGET</small></article></div>
+          <div class="chart-grid"><article class="chart-card chart-wide"><div class="chart-heading"><div><span>CHART / 01</span><h3>Exam score distribution</h3></div><small>COUNT OF STUDENTS</small></div><canvas id="scoreChart"></canvas></article><article class="chart-card"><div class="chart-heading"><div><span>CHART / 02</span><h3>Study hours & score</h3></div><small>AVERAGE SCORE</small></div><canvas id="studyChart"></canvas></article><article class="chart-card"><div class="chart-heading"><div><span>CHART / 03</span><h3>Attendance & score</h3></div><small>AVERAGE SCORE</small></div><canvas id="attendanceChart"></canvas></article><article class="chart-card chart-wide"><div class="chart-heading"><div><span>CHART / 04</span><h3>Feature correlation with exam score</h3></div><small>PEARSON CORRELATION</small></div><canvas id="correlationChart"></canvas></article></div>
+          <p class="data-footnote">Correlation describes association in this dataset; it does not establish cause and effect. A small number of records may contain missing values in columns not used by the model.</p>
+        </section>
+        <section class="section predict-section" id="predict">
+          <div class="section-head"><span class="section-index">04 / THE PREDICTION</span><span class="section-aside">YOUR INPUTS, THE MODEL'S ESTIMATE</span></div>
+          <div class="predict-intro"><div><span class="pill dark-pill">LIVE MODEL / LASSO REGRESSION</span><h2>Make room<br>for <em>what's next.</em></h2></div><p>Adjust the eight inputs below. The original model uses these values after the same one-hot encoding and scaling used during training.</p></div>
+          <form id="predictionForm" class="prediction-layout">
+            <div class="form-panel">
+              <div class="form-top"><span>STUDENT PROFILE</span><span>8 INPUTS / 01</span></div>
+              <div class="form-grid">
+                <label class="field"><span>Hours studied <small>HOURS / DAY</small></span><input type="number" name="Hours_Studied" min="1" max="44" value="20" required><i>↗</i></label>
+                <label class="field"><span>Attendance <small>PERCENT</small></span><input type="number" name="Attendance" min="60" max="100" value="80" required><i>%</i></label>
+                <label class="field"><span>Sleep hours <small>HOURS / NIGHT</small></span><input type="number" name="Sleep_Hours" min="4" max="10" value="7" required><i>↗</i></label>
+                <label class="field"><span>Previous scores <small>MARKS</small></span><input type="number" name="Previous_Scores" min="50" max="100" value="75" required><i>↗</i></label>
+                <label class="field"><span>Tutoring sessions <small>SESSIONS</small></span><input type="number" name="Tutoring_Sessions" min="0" max="8" value="1" required><i>↗</i></label>
+                <label class="field select-field"><span>Parental involvement <small>LEVEL</small></span><select name="Parental_Involvement"><option>Low</option><option selected>Medium</option><option>High</option></select><i>⌄</i></label>
+                <label class="field select-field"><span>Access to resources <small>LEVEL</small></span><select name="Access_to_Resources"><option>Low</option><option selected>Medium</option><option>High</option></select><i>⌄</i></label>
+                <label class="field select-field"><span>Extracurricular activities <small>PARTICIPATION</small></span><select name="Extracurricular_Activities"><option>No</option><option selected>Yes</option></select><i>⌄</i></label>
+              </div>
+              <div class="form-bottom"><p>Input limits follow the observed ranges in your dataset.</p><button class="submit-button" type="submit" id="predictButton">PREDICT MY MARKS <span>↗</span></button></div>
+            </div>
+            <div class="result-panel" id="resultPanel"><div class="result-sticker">YOUR<br>FUTURE<br>IS OPEN</div><span class="result-kicker">THE MODEL SAYS</span><div class="result-value" id="resultValue">—<small>/ 100*</small></div><div class="result-rule"></div><p id="resultMessage">Your prediction will appear here. Start with your current study profile.</p><div class="result-meta"><span>MODEL</span><b>LASSO REGRESSION</b></div><div class="result-meta"><span>STATUS</span><b id="resultStatus">AWAITING INPUT</b></div><small class="result-disclaimer">*The model output is an estimate. It is not a guaranteed result or an official grade.</small></div>
+          </form>
+        </section>
+        <section class="section experience-section" id="experience">
+          <div class="section-head"><span class="section-index">05 / THE SPACE</span><span class="section-aside">MOVE YOUR CURSOR. CHANGE YOUR VIEW.</span></div>
+          <div class="experience-heading"><h2>Learning is<br>a <em>dimension.</em></h2><p>A little perspective changes everything. Move around the frame and explore the depth.</p></div>
+          <div class="tunnel-stage" id="tunnelStage"><div class="tunnel" id="tunnel"><div class="tunnel-frame frame-1"></div><div class="tunnel-frame frame-2"></div><div class="tunnel-frame frame-3"></div><div class="tunnel-frame frame-4"></div><div class="tunnel-frame frame-5"></div><div class="tunnel-frame frame-6"></div><div class="tunnel-frame frame-7"></div><div class="tunnel-frame frame-8"></div><div class="tunnel-panel panel-a"></div><div class="tunnel-panel panel-b"></div><div class="tunnel-panel panel-c"></div><div class="tunnel-panel panel-d"></div><div class="tunnel-core"><span>KEEP</span><b>GOING.</b><small>THE NEXT STEP IS YOURS</small></div></div><span class="tunnel-caption left">FIG. 005 / PERSPECTIVE STUDY</span><span class="tunnel-caption right">MOVE TO INTERACT ↗</span></div>
+        </section>
+        <section class="section model-section" id="model">
+          <div class="section-head"><span class="section-index">06 / UNDER THE HOOD</span><span class="section-aside">THE SCIENCE, NOT THE SMOKE</span></div>
+          <div class="model-grid"><div><span class="pill dark-pill">MODEL SPECIFICATION</span><h2>Simple model.<br><em>Real signal.</em></h2><p>The supplied notebook compared eight regression approaches. Lasso Regression ranked first by R² and is the estimator saved in your model file.</p><div class="model-tag-row"><span>PYTHON</span><span>SCIKIT-LEARN</span><span>FLASK API</span><span>STANDARD SCALER</span></div></div><div class="metrics-board"><div class="metrics-head"><span>HELD-OUT EVALUATION</span><span>NOTEBOOK RESULTS</span></div><div class="metric"><span>MAE <small>Mean absolute error</small></span><b>0.9375</b></div><div class="metric"><span>RMSE <small>Root mean squared error</small></span><b>2.0282</b></div><div class="metric"><span>R² SCORE <small>Explained variance proportion</small></span><b>0.7090</b></div><div class="metrics-foot">Reported by the uploaded training notebook. These are not a live re-evaluation.</div></div></div>
+          <div class="feature-strip"><span>MODEL INPUTS</span><p>Hours studied · Attendance · Parental involvement · Access to resources · Extracurricular activities · Sleep hours · Previous scores · Tutoring sessions</p></div>
+        </section>
+        <footer class="footer section" id="contact"><div class="footer-top"><div><a class="footer-logo" href="#home">p<span>.</span></a><h2>Make your<br><em>next move.</em></h2></div><a href="#home" class="back-top">BACK TO TOP ↑</a></div><div class="footer-bottom"><span>© 2026 PREDICT / STUDENT POTENTIAL STUDIO</span><span>BUILT WITH DATA, DESIGNED FOR POSSIBILITY.</span><span>FLASK × SCIKIT-LEARN</span></div></footer>
+      </div>
+    </div>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+</body></html>
